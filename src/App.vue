@@ -13,10 +13,14 @@
 </template>
 
 <script setup>
+import { ref, computed } from "vue"
+
 import { useFlashcardsStore } from './stores/flashcards'
 import Flashcard from './components/Flashcard.vue';
 
 const flashcardsStore = useFlashcardsStore()
+
+const flashcards = computed(() => flashcardsStore.flashcards)
 
 </script>
 
